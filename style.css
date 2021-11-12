@@ -1,0 +1,117 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    color: #545454;
+    display: flex;
+    font-family: sans-serif;
+    justify-content: center;
+}
+
+.container{
+    background: lightblue;
+
+    margin: 50px;
+    padding: 50px;
+    border-radius: 25px;
+
+}
+
+.title{
+    text-align: center;
+}
+
+.status-action{
+    margin-top: 25px;
+    font-size:25px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.status span{
+    color: ivory;
+}
+
+.reset{
+    cursor: pointer;
+}
+
+.reset:hover{
+    color: white;
+}
+
+.game-grid {
+    background: cornflowerblue;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    /* 3 spaces repeated for 1 fr */
+    grid-template-rows: repeat(3, 1fr); 
+    grid-gap: 8px;
+    margin-top: 50px;
+}
+
+.game-cell{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    height: 200px;
+    width: 200px;
+    background: lightblue;
+}
+
+.×, .○ {
+    cursor: default;
+}
+
+.×:before{
+    content: '×';
+    font-size: 150px;
+}
+
+.○:before{
+    color: ivory;
+    content: '○';
+    font-size: 150px;
+    padding-bottom: 18px;
+}
+
+.won{
+    background: yellow;
+}
+
+@media only screen and (max-width: 1024px){
+    .game-grid{
+        margin-top: 25px;
+    }
+    .game-cell{
+        height:150px;
+        width: 150px;
+    }
+    .×:before{
+        font-size:100px;
+    }
+    .○:before{
+        font-size:100px;
+    }
+}
+
+@media only screen and (max-width: 540px){
+    .container{
+        margin: 25px;
+        padding: 25px;
+    }
+    .game-cell{
+        height:100px;
+        width: 100px;
+    }
+    .x:before{
+        font-size: 80px;
+    }
+    .o:before{
+        font-size: 80px;
+    }
+}
